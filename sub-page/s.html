@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>hh</title>
+</head>
+<body>
+<div id='d1' style='display:block;width:30px;height:20px;background-color:red'></div>
+<div id='d2' style='display:none;width:30px;height:20px;background-color:blue'></div>
+<div id='d3' style='display:none;width:30px;height:20px;background-color:yellow'></div>
+<input type=button value="Toggle" onclick='toggleDiv()'>
+<script>
+// 全局变量
+var divs=[];
+var divCnt = 3; //div 数量 
+for (var i=0;i<divCnt;i++) {
+   divs[i] = document.getElementById("d"+(i+1));
+}
+var selectedDiv = 0;
+function toggleDiv(){
+    selectedDiv++;
+    selectedDiv = selectedDiv % divCnt; //
+    for (var i=0;i< divCnt;i++) {
+       divs[i].style.display="none"; 
+    }
+    divs[selectedDiv].style.display="block"; 
+ }   
+ </script>
+</body>
+</html>

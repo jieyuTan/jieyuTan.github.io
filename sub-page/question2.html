@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>知识问答</title>
+	<link rel="stylesheet" type="text/css" href="..\css\global.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+</head>
+<body>
+	<canvas id="myc" src=""></canvas>
+	<div id="header">
+		<dd class="outside-title"><h1><a href="question.html">乘车安全</a></h1></dd>
+		<dd class="outside-title"><h1><a href="question2.html">行走安全</a></h1></dd>
+	</div>
+	<div id="main">
+	<div id="content1" style="display: block;">
+		<dd class="inner-title"><h2>过马路</h2></dd>
+		<dd><h3>过马路，好的做法是什么？</h3></dd>
+		<dd><img src="../images/sidewalk.png"></dd>
+		<dd><p>一停、二看、三通过；不要嬉戏，玩闹</p></dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content2" style="display: none;">
+		<dd class="inner-title"><h2>红绿灯</h2></dd>
+		<dd><h3>绿灯闪时或快要变红灯时，你应该怎么做？</h3></dd>
+		<dd><img src="../images/TrafficLights.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">赶紧快速通过</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">等下次绿灯亮时</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content3" style="display: none;">
+		<dd class="inner-title"><h2>站位1</h2></dd>
+		<dd><h3>过马路时，图上哪个站位更安全？</h3></dd>
+		<dd><img src="../images/double.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">左边</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">右边</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content4" style="display: none;">
+		<dd class="inner-title"><h2>站位2</h2></dd>
+		<dd><h3>在没有斑马线的地方，过马路时，图上哪个站位更安全？</h3></dd>
+		<dd><img src="../images/position.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">左边</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">右边</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content5" style="display: none;">
+		<dd class="inner-title"><h2>站位3</h2></dd>
+		<dd><h3>大巴前面通过很危险！</h3></dd>
+		<dd><img src="../images/publiccar.png"></dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content6" style="display: none;">
+		<dd class="inner-title"><h2>衣服1</h2></dd>
+		<dd><h3>外出时我们选择什么颜色的服装更安全？</h3></dd>
+		<dd><img src="../images/cloth.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">暗色</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">亮色</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content7" style="display: none;">
+		<dd class="inner-title"><h2>衣服2</h2></dd>
+		<dd><h3>晚上外出时我们选择什么颜色的服装更安全？</h3></dd>
+		<dd><img src="../images/black.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">暗色</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">亮色</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content8" style="display: none;">
+		<dd class="inner-title"><h2>衣服3</h2></dd>
+		<dd><h3>当我们不想穿颜色太亮的衣服出门时，我们应该做那些安全措施呢？</h3></dd>
+		<dd><img src="../images/sign.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">在手臂上贴亮色的标记，鞋子上有亮色的标记</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">不用担心，我会很安全的</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content9" style="display: none;">
+		<dd class="inner-title"><h2>安全帽</h2></dd>
+		<dd><h3>骑车要带头盔，图上哪个佩戴是正确的？</h3></dd>
+		<dd><img src="../images/hat.png"></dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="tell()">1</dd>
+		<dd><input type="radio" name="radio" id="obj" onclick="demo()">2</dd>
+		<dd><input type=button value="下一问" onclick='toggleDiv()' style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+	<div id="content10" style="display: none;">
+		<dd class="inner-title"><h2>抬头走</h2></dd>
+		<dd><img src="../images/police.png"></dd>
+		<dd><input type=button value="下一问" style="float: right; margin-bottom: 30px;margin-right: 30px;"></dd>
+	</div>
+</div>
+<script src="../js/bubbles.js"></script>
+<script type="text/javascript">
+	var divs=[];
+	var divCnt = 10; //div 数量 
+	for (var i=0; i < divCnt; i++) {
+	   divs[i] = document.getElementById("content"+(i+1));
+	}
+	var selectedDiv = 0;
+	function toggleDiv(){
+	    selectedDiv++;
+	    selectedDiv = selectedDiv % divCnt; 
+	    for (var i=0; i < divCnt; i++) {
+	       divs[i].style.display="none"; 
+	    }
+	    divs[selectedDiv].style.display="block"; 
+	 }
+
+	function tell(){
+		alert("答案是错误的，再仔细想想！");
+	}
+	function demo(){
+		alert("恭喜你，回答正确！");
+	}
+</script>
+</body>
+</html>
