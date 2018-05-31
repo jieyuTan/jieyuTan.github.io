@@ -17,7 +17,7 @@ a:hover{
 }
 body {
 	position: relative;
-    background: url(../images/bg.png) no-repeat 100% 100%;
+    background: url(../images/bg.png);
 }
 #all{
     margin: 10px auto;
