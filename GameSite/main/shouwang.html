@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>守望先锋</title>
+<link rel="stylesheet" type="text/css" href="../css/lodin.css">
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script src="../javascript/jquery-3.2.1.js"> </script>
+<script src="../javascript/loding.js"></script>
+<style>
+*{
+	padding:0;
+	margin:0;
+	}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+}
+
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: rgba(58,64,98,0.8);
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 85%;
+	top: 70px;
+	background-color:rgba(58,64,98,0.8);
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 35%;
+	top: 70px;
+	background-color: rgba(58,64,98,0.8);
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+.first {
+	width:340px;
+	height:350px;
+	margin-top:30px;
+	margin-left:12%;
+	margin-right:7%;
+	overflow:hidden;
+	float:left;
+	padding:20px;
+	background-color:rgba(255,255,255,0.5);
+	}
+.second {
+	background-color: rgba(255,204,255,1);
+	float: left;
+	height: 407px;
+	width: 100%;
+	background:url(../images/shouwang/moyila.jpg) no-repeat 50% 50%;
+}
+.one {
+	float: left;
+	height: 500px;
+	width: 100%;
+	background-image: url(../images/shouwang/shouwang12.PNG);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.two {
+	width:380px;
+	height:360px;
+	margin-top:10px;
+	margin-left:10%;
+	background-color:rgba(204,204,204,0.51);
+	border-radius:60px;
+	float:left;
+	padding-top:20px;
+	padding-left:40px;
+	z-index:15;
+}
+.two ul li a,.two p a {
+	color:rgba(0,0,0,1);
+}
+.two ul li a:hover,.two p a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateX(10px);
+}
+.three {
+	width:600px;
+	height:350px;
+	background-color:rgba(204,204,204,0.51);
+	border-radius:60px;
+	margin-left: 60px;
+	margin-top: 20px;
+	float:left;
+	padding:10px;
+	
+}
+#wai #divw {
+	height:690px;
+	background-image: url(../images/shouwang/shouwang13.PNG);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.four {
+	width:100%;
+	height:30px;
+	float:left;
+	padding-top:50px;
+}
+#v,#w {
+	font-size:18px;}
+#apDiv8 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 92%;
+	opacity: 0.4;
+}
+.first .container {position:absolute;width:340px;height:330px;overflow:hidden;}
+.first .container1{background-color:rgba(204,204,204,.01);width:380px;height:560px;position: relative; padding-top:310px; text-align:center;top:0px; left:-20px; transition:0.5s; color:rgba(0,51,102,1);}
+.first .container1:hover{opacity:1;transition:0.5s linear;color:rgba(0,0,51,1); background-color:rgba(204,204,204,.61); top:-240px; left:-20px; color:rgba(0,51,102,1);}
+.first img{ max-width:100%; vertical-align: middle;margin-top:20px;}
+.first img{transition:0.5s}
+.first:hover img{transform:scale(1.2,1.2);}
+.btn{
+	display: inline-block; 
+	padding: 5px 10px; 
+	font-size: 14px; 
+	color: #fff; 
+	border: 2px solid #4d92d9; 
+	background-color: #4d92d9; 
+	text-decoration: none; 
+	transition: 0.4s;
+	margin:5px;}
+.btn:hover{
+	background-color: transparent; 
+	color: #4d92d9; 
+	transition: 0.4s;}
+	h3{ color:rgba(153,51,51,1);margin:5px;}
+	h4{
+	color: rgba(102,102,102,1); 
+	float: left; 
+	width: 360px; 
+	height:50px;
+	font-size: 24px; 
+	font-weight: 400; 
+	text-align: center;  
+	position: relative; 
+	z-index: 50;
+	font-family:"黑体";
+}
+	h4 span{
+	width: 360px;
+	position: relative;
+	margin:20px;
+	color: rgba(255,255,102,1);
+}
+h4{color:rgba(153,0,0,1);text-align:left;margin-left:20px;margin-bottom:30px;}
+h1{text-align:center;font-size:50px; font-family:"微软雅黑"; color:rgba(153,0,0,1);}
+
+</style>
+
+</head>
+
+<body>
+<div id="wai">
+   <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%" class="t">
+  <a href="register.html">注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+      <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height=
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>"48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+
+  <table width="60%" border="0" text-align="center" style="margin-left:7%">
+    <tr></tr>
+    <tr>
+      <td width="100%"><h1>为未来而战</h1></td>
+    </tr>
+    <tr>
+      <td><p>军人、科学家、冒险家、奇人异士。 <br>
+        <br>
+        在人类陷入空前危机之时，来自全球各个国家的特种精英们，为了结束战争、重铸秩序而团结在了一起。他们，就是<strong>守望先锋</strong>。 <br>
+        <br>
+        英雄们最终结束了这场危机，人类文明在随后的数十年内和平共存并迎来了一个探索、革新和发现的新时代。尽管如此，守望先锋在多年后逐渐被人们所遗忘，最终难逃被解散的命运。 <br>
+        <br>
+      </p>
+        <p>如今，世界各地争端再起，人们都翘首期待着新英雄的出现，或旧英雄的归来。 <br>
+          <br>
+          你愿意与我们共同抗争吗？</p></td>
+    </tr>
+    <tr>
+      <td><center> <a href="#" class="btn"><h2>探索游戏</h2></a></center></td>
+    </tr>
+  </table>
+
+</div>
+<div class="four"></div>
+<div class="one">
+<div class="first">
+<h4><span>雪国仙境再度到来</span></h4>
+<div class="container"><img src="../images/shouwang/shouwang7.PNG"></div>
+<div class="container1">
+<h4>又是一年圣诞时！</h4>
+						<p>今年，我们将用全新的乱斗模式庆祝节日的到来——雪域狩猎！同时雪球攻势也将回归。我们还重新装饰了黑森林、国王大道和花村的大厅。不过我们也知道，大家最想要的是礼物！超过50件全新主题物品等着你来解锁，包括了全新的传说品质皮肤：雪地飞枭安娜、冰霜精灵“黑影”、海滩“狂鼠”、冰河渔霸“路霸”等。当然，去年的圣诞物品也会以折扣价格再度开放。</p>
+						<a href="#" class="btn">Learn more</a></div>
+</div>
+<div class="first">
+		<h4><span>全民实力赛</span></h4>
+		  <div class="container"><img src="../images/shouwang/shouwang8.PNG" alt="Image-2"> </div>
+				 <div class="container1">
+<h4>快来参加吧！</h4>
+	<p>2017全民实力赛冬季赛于10月25日正式开放报名！作为零门槛人人都可参与的暴雪游戏赛事，只要你热爱暴雪游戏，这里都将成为你一展身手的舞台。冬季赛的比赛中中包含了三个游戏项目《炉石传说》、《风暴英雄》、《守望先锋》，其中《炉石传说》项目将分为单人赛和狂野模式，狂野模式作为新的比赛内容，所有报名并参加狂野模式的玩家，将获得两包卡包奖励。</p>
+	<a href="#" class="btn">Learn more</a></div>
+
+</div>
+<div class="four"></div>
+<div class="second">
+<div class="two"><table width="340" border="1px solid fdf2f2">
+  <tr>
+    <td width="97" height="50"><h3>角色类型</h3></td>
+    <td width="160"><p><a href="#">支援</a></p></td>
+    <td width="61" rowspan="5"><h1>莫伊拉</h1></td>
+  </tr>
+  <tr>
+    <td rowspan="4"><h3>技能</h3></td>
+    <td height="40"><p><a href="#">生化之握</a></p></td>
+    </tr>
+  <tr>
+    <td height="40"><p><a href="#">生化之球</a></p></td>
+    </tr>
+  <tr>
+    <td height="40"><p><a href="#">消散</a></p></td>
+    </tr>
+  <tr>
+    <td height="40"><p><a href="#">聚合射线</a></p></td>
+    </tr>
+</table>
+ 
+  <h3>简介</h3>
+  <ul>
+    <li><a href="#">莫伊拉·奥德莱恩，年龄：48岁</a></li>
+    <li><a href="#">职业：基因科学家</a></li>
+    <li><a href="#">行动基地：爱尔兰，都伯林；伊拉克，绿洲城</a></li>
+    <li><a href="#">隶属：黑爪；（前）暗影守望成员</a></li>
+  </ul><br>
+
+</div>
+<div class="three">
+<center>
+<video src="../videos/moyila.mp4" controls style="width:450px;height:350px;">您的浏览器不支持video标签</video>
+ </center>
+</div></div>
+<div id="divd">
+  <p>&nbsp;&nbsp;&copy;&nbsp;Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p></div>
+<div id="apDiv8"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="4,4,48,49" href="#top">
+  </map>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>

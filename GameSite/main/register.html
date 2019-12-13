@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册畅游</title>
+<style type="text/css">
+#all {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width:500px;
+	height:600px;
+	background: url(../images/background.png) no-repeat;
+}
+#all #divh {
+	width:500px;
+	height:600px;
+	background-color: rgba(153,153,153,0.51);
+
+}
+#all #divh #divj {
+	width:500px;
+	height:70px;
+	background-color:rgba(0,0,102,0.51);
+	font-family:"微软雅黑";
+	font-size:20px;
+	color:#b18e95;
+}
+#all #divh #txt {
+	font-family:"宋体";
+	position:relative;
+	font-size:18px;
+	color:rgba(255,255,255,1);
+	padding-top:30px;
+	padding-left:50px;
+
+}
+label {
+	width:120px;
+	font-size:18px;
+	text-align:right;
+	float:left;
+}
+#myc {
+	float:left;
+	position: absolute;
+	z-index:-1;
+}
+body {
+	background-color: rgba(0,0,102,0.81);
+}
+</style>
+</head>
+
+<body>
+<canvas id="myc" src=""></canvas>
+<div id="all">
+  <div id="divh">
+  <div id="divj">
+    <table width="500" height="70" border="0">
+      <tr>
+        <td width="19" height="70">&nbsp;</td>
+        <td width="77"><img src="../images/LOGO.png" width="70" height="68"></td>
+        <td width="390">欢迎加入畅游游戏！我们一起战斗吧！</td>
+      </tr>
+    </table>
+  </div>
+  <div id="txt">
+  <form action="index.html" method="post">
+   <p><label>用户名称：</label> 
+  <input type="text" name="user" required/>
+    <br>
+  </p>
+  <p><label>用户密码：</label> 
+  <input type="password" name="passward" required/>
+  </p>
+  <p><label>姓 名：</label> 
+  <input type="text" name="user" required>
+</p>
+<p><label>性 别：</label> 
+      <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0" />
+      男
+      <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1" />
+      女
+  </p>
+<p><label>年 龄：</label> 
+  <input type="number" name ="age" min="0" max="100"/>
+</p>
+<p><label>出生日期：</label> <input type="date"  name="user_date"/>
+  </p>
+<p><label>电子邮箱：</label> 
+<input type="email" class=tet name="user_email" id="email" />
+</p>
+<p> <label>联系地址：</label> 
+  <input type ="text" class=tet name ="address" />
+</p>
+<input type="submit" name="submit" style="margin-left:150px" value="提交"/>
+</form>
+  </div>
+  </div>
+</div>
+<script src="../javascript/jquery-3.2.1.js"></script>
+<script src="../javascript/bubbles.js"></script>
+<script>
+$(document).ready(function() {
+$('label').mouseover(function() {
+	$(this).css('color','rgba(255,51,51,.81)')
+	});
+	$('label').mouseout(function() {
+	$(this).css('color','rgba(255,255,255,1)')
+	});
+});
+</script>
+</body>
+</html>

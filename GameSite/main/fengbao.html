@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>风暴英雄</title>
+<link rel="stylesheet" type="text/css" href="../css/lodin.css">
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script src="../javascript/jquery-3.2.1.js"> </script>
+<script src="../javascript/loding.js"></script>
+
+<style>
+*{
+	padding:0;
+	margin:0;
+	}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+}
+#divw {
+	background:url(../images/fengbao/fengbao8.png) no-repeat 50% 50%;}
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: #3a4062;
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 85%;
+	top: 70px;
+	background-color: #384067;
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 33.7%;
+	top: 70px;
+	background-color: #3a4062;
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+.first {
+	width:320px;
+	height:350px;
+	margin-top:10px;
+	margin-left:30px;
+	margin-right:90px;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	}
+#v,#w {
+	font-size:18px;}
+#wai .one {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 700px;
+	width: 330px;
+	padding-top: 60px;
+	padding-left: 20px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai .one ul li {
+	list-style-type:none;
+}
+#wai .one ul li a {
+	background-color: rgba(51,51,51,.51);
+	float: left;
+	height: 30px;
+	width: 295px;
+	font-family:"黑体";
+	padding-left: 10px;
+	line-height:30px;
+	color:rgba(255,255,255,1);
+}
+#wai .one ul li ul li a{
+	margin-left:10px;
+	width:285px;
+	color:rgba(255,255,255,0.81);
+}
+#wai .one ul li a:hover  {
+	color: rgba(102,153,204,1);}
+#wai .one ul li ul li a:hover {
+	background-color:rgba(255,255,204,0.81);
+	transform:translateX(5px);
+	color:rgba(153,0,0,1);}
+#wai #two {
+	background-color: rgba(204,204,204,.51);
+	margin-top:20px;
+	margin-left:20px;
+	width:770px;
+	padding:25px;
+	height:710px;
+	float:left;
+}
+#wai #two h3 a {
+	color:rgba(153,0,0,0.51);}
+#wai #two h3 a:hover {color:rgba(153,0,0,1)}
+#wai #two img a:hover {
+	border:solid 1px #FFFFFF;}
+#wai #three {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 430px;
+	width: 450px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai #three table tr td form p label {
+	float: left;
+	width: 250px;
+}
+#wai #three table tr td {
+	color: rgba(0,0,51,1);
+}
+#wai #three h2 {
+	color: rgba(255,102,51,1);
+	height: 30px;
+	width: 120px;
+	border:rgba(255,255,255,1) solid 2px;
+	text-align:center;
+	line-height:30px;
+	border-radius:5px;
+}
+#wai #four {
+	float: left;
+	height: 370px;
+	width: 650px;
+	margin-left: 30px;
+	background-color: rgba(204,204,204,.51);
+	padding:30px;
+	margin-top:20px;
+}
+#wai #four h2 {
+	color: rgba(102,0,0,1);
+}
+#wai #four table tr td a {
+	color: rgba(0,0,102,1);
+}
+#wai #four table tr td a:hover {color:rgba(153,0,0,1);
+transform:translateY(-5px);}
+#wai #three #five {
+	padding-top: 10px;
+	padding-left:25px;
+	float: left;
+	height: 150px;
+	width: 400px;
+	margin-top:25px;
+	margin-left:15px;
+}
+#wai #three #five ul li {
+	list-style-type: none;
+	margin-top:10px;
+}
+#wai #three #five ul li a { color: rgba(0,51,102,.81);}
+#wai #three #five ul li a:hover { color:rgba(0,51,102,1);
+transform:rotate(-5deg);
+}
+#myc {height: 6px;
+	width: 700px;
+	background:rgba(255,255,255,1);}
+#apDiv8 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 90%;
+	opacity: 0.4;
+}
+</style>
+
+</head>
+
+<body>
+<div id="wai">
+   <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%" class="t">
+  <a href="register.html">注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+     <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height="48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+</div>
+<div class="one"><ul>
+  <li><a href="#">游戏概览</a>
+    <ul>
+      <li><a href="#">基础内容</a></li>
+  <li><a href="#">英雄类型</a></li>
+  <li><a href="#">游戏模式</a></li>
+  <li></li>
+  <li></li>
+    </ul>
+  </li>
+  <li><a href="#">游戏特色</a></li>
+  <li><a href="#">地图场景</a>
+    <ul><li><a href="#">天空殿</a></li>
+  <li><a href="#">巨龙镇</a></li>
+  <li><a href="#">沃斯卡娅铸造厂</a></li>
+  <li><a href="#">花村</a></li>
+  <li><a href="#">炼狱圣坛</a></li>
+  </ul></li>
+  <li><a href="#">游戏攻略</a></li>
+  <li><a href="#">风暴乱斗</a>
+    <ul>
+      <li><a href="#">突变模式</a></li>
+  <li><a href="#">单兵线</a></li>
+  <li><a href="#">惩罚者竞技场</a></li>
+  <li><a href="#">神殿竞技场</a></li>
+  <li><a href="#">花园竞技场</a></li>
+  <li><a href="#">黑心的复仇</a></li>
+    </ul></li>
+    <li><a href="#">排名模式</a></li>
+    <li><a href="#">好友招募</a></li>
+</ul>
+</div>
+<div id="two"><table width="748" border="0">
+  <tr>
+    <td width="427" height="150"><img src="../images/fengbao/fengbao4.jpg" width="400" height="143"></td>
+    <td width="311"><h3><a href="#">《风暴英雄》核心概念</a></h3>
+      <p>&nbsp;&nbsp;本系列的核心概念系列文章既为新手玩家提供指导，同时也为那些经验更丰富的玩家提供概要的介绍，提高对游戏的基础认知。这一次我们将着重介绍英雄定位之间的差异，以及游戏中队友对身处不同定位的你会有何种期待。</p></td>
+  </tr>
+  <tr>
+    <td height="24" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="159"><img src="../images/fengbao/fengbao5.jpg" width="400" height="143"></td>
+    <td><h3><a href="#">和Psalm一起谈谈潜行改动</a></h3>
+      <h3><a href="#"></a></h3>
+      <p>&nbsp;&nbsp;&nbsp; 在《风暴英雄》2017年底迎来的众多游戏改动中，其中一个改动尤为醒目：潜行的重做。12月14日的补丁中对游戏中潜行机制进行了彻底改动。同时也对4个主要的潜行英雄——泽拉图、诺娃、瓦莉拉和萨穆罗进行了游戏和平衡调整，使其能够适应更新变化。</p></td>
+  </tr>
+  <tr>
+    <td height="27" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="159"><img src="../images/fengbao/fengbao6.jpg" width="400" height="143"></td>
+    <td><h3><a href="#">银白联赛第二十一周报名开启</a></h3>
+      <p>《风暴英雄》银白联赛第二十一周比赛报名于 12月18日-12月24日 进行，比赛将于 12月27日-12月31日 进行，和往常相同，选手们可以以战队或者个人的身份报名参与进比赛中来本次银白联赛报名上限仍为64支战队，欢迎各位《风暴英雄》的爱好者们踊跃报名，召集你的好友，一同踏上前往时空枢纽的征程吧！</p></td>
+  </tr>
+  <tr>
+    <td height="25" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="176"><img src="../images/fengbao/fengbao7.jpg" width="400" height="143"></td>
+    <td><h3><a href="#">每周收藏特惠：12月20日 - 1月3日</a></h3>
+      <p>每周三我们都会将部分英雄价格打折，并将新物品替换到推荐物品中。为了庆祝冬幕节，这次的每周特惠更新将比平时时间更长，物品更多。以下就是本周物品列表。</p></td>
+  </tr>
+</table>
+</div>
+<div id="three">
+  <div id="five">
+  <h2>媒体推荐</h2>
+  <ul>
+    <li><a href="#">和Glaurun一起详解泽拉图改动</a></li>
+    <li><a href="#">和Psalm一起谈谈潜行改动</a></li>
+    <li><a href="#">[周边商城] 欢度冬幕节  周边送好礼</a></li>
+    <li><a href="#">365复盘世俱杯：最后一战中的精彩博弈</a></li>
+  </ul>
+  </div>
+  <div id="five">
+    <h2>全新指南</h2>
+  <ul>
+    <li><a href="#">《风暴英雄》2.0 福利一览</a></li>
+    <li><a href="#">《风暴英雄》2.0 指南</a></li>
+    <li><a href="#">《风暴英雄》2.0 概述</a></li>
+  </ul>
+</div>
+</div>
+<div id="four">
+  <h2>2017 冬幕节</h2>
+  <center>
+<video src="../videos/fengbao winter.mp4" controls style="width:600px;height:350px;">您的浏览器不支持video标签</video>
+ </center>
+</div>
+<div id="divd">
+<p>&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p></div>
+<div id="apDiv8"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="4,6,48,48" href="#top">
+  </map>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>

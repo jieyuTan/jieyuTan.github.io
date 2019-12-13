@@ -1,0 +1,48 @@
+#apDiv1 {
+		position: absolute;
+		width: 136px;
+		height: 55px;
+		z-index: 1;
+		left: 1061px;
+		top: 12px;
+		width: 80px;
+		height: 40px;
+		background-color: #25375f;
+		color: #666;
+		font-size: 18px;
+		text-align: left;
+		}
+		#apDiv1 a {
+			padding-left: 10px;
+			padding-top: 10px; 
+			text-decoration: none;
+			color: black;
+		}
+	    #apDiv2 {
+	    	position: absolute;
+			width: 136px;
+			height: 55px;
+			z-index: 1;
+			left: 1061px;
+			top: 12px;
+		    width: 240px;
+		    height: 120px;
+		    background-color:#384067;
+		    text-align: right;
+		    display: none;
+	    }
+	    label {
+	    	width: 80px;
+	    	text-align: right;
+	    	display: block;
+	    	float: left;
+	    }
+
+
+
+
+
+
+
+
+

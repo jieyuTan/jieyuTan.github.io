@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>星际争霸Ⅱ</title>
+<link rel="stylesheet" type="text/css" href="../css/lodin.css">
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script src="../javascript/jquery-3.2.1.js"> </script>
+<script src="../javascript/loding.js"></script>
+
+<style>
+*{
+	padding:0;
+	margin:0;
+	}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+}
+#divw {
+	background: url(../images/xingji/xingji6.png) no-repeat 50% 50%;}
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: #3a4062;
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 85%;
+	top: 70px;
+	background-color: #384067;
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 33.7%;
+	top: 70px;
+	background-color: #3a4062;
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+.first {
+	width:320px;
+	height:350px;
+	margin-top:10px;
+	margin-left:30px;
+	margin-right:90px;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	}
+#v,#w {
+	font-size:18px;}
+#wai .one {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 550px;
+	width: 330px;
+	padding-top: 60px;
+	padding-left: 20px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai .one ul li {
+	list-style-type:none;
+}
+#wai .one ul li a {
+	background-color: rgba(51,51,51,.51);
+	float: left;
+	height: 30px;
+	width: 295px;
+	font-family:"黑体";
+	padding-left: 10px;
+	line-height:30px;
+	color:rgba(255,255,255,1);
+}
+#wai .one ul li ul li a{
+	margin-left:10px;
+	width:285px;
+	color:rgba(255,255,255,0.81);
+}
+#wai .one ul li a:hover  {
+	color: rgba(102,153,204,1);}
+#wai .one ul li ul li a:hover {
+	background-color:rgba(255,255,204,0.81);
+	transform:translateX(5px);
+	color:rgba(153,0,0,1);}
+#wai #two {
+	background-color: rgba(204,204,204,.51);
+	margin-top:20px;
+	margin-left:20px;
+	width:800px;
+	padding:25px;
+	height:620px;
+	float:left;
+}
+#wai #three {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 430px;
+	width: 450px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai #three table tr td form p label {
+	float: left;
+	width: 250px;
+}
+#wai #three table tr td {
+	color: rgba(0,0,51,1);
+}
+#wai #three h2 {
+	color: rgba(255,102,51,1);
+	height: 30px;
+	width: 120px;
+	border:rgba(255,255,255,1) solid 2px;
+	text-align:center;
+	line-height:30px;
+	border-radius:5px;
+}
+#wai #four {
+	float: left;
+	height: 370px;
+	width: 650px;
+	margin-left: 30px;
+	background-color: rgba(204,204,204,.51);
+	padding:30px;
+	margin-top:20px;
+}
+#wai #four h2 {
+	color: rgba(102,0,0,1);
+}
+#wai #four table tr td a {
+	color: rgba(0,0,102,1);
+}
+#wai #four table tr td a:hover {color:rgba(153,0,0,1);
+transform:translateY(-5px);}
+#wai #three #five {
+	padding-top: 10px;
+	padding-left:25px;
+	float: left;
+	height: 180px;
+	width: 400px;
+	margin-top:25px;
+	margin-left:15px;
+}
+#wai #three #five ul li {
+	list-style-type: none;
+	text-align:center;
+	line-height:30px;
+	height:30px;
+	width:100px;
+	margin:10px;
+	float:left;
+	background-color:rgba(255,204,255,.61);
+}
+#wai #three #five ul li:hover{ background-color:rgba(153,204,255,.51);transform:rotate(5deg);border-radius:10px 6px;}
+#wai #three #five ul li a {height:30px;
+	width:80px; color: rgba(0,51,102,.81);}
+#wai #three #five ul li a:hover { color:rgba(0,51,102,1);
+transform:rotate(-5deg);
+}
+#myc {height: 6px;
+	width: 700px;
+	background:rgba(255,255,255,1);}
+#apDiv8 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 90%;
+	opacity: 0.4;
+}
+.talk{width:600px;margin:20px;height:80px;float:left;background-color:rgba(0,51,153,.31);}
+.lone{margin:20px;width:360px; float:left;}
+.lone .touch1,.lone .touch2,.lone .touch3,.lone .touch4{background-color:rgba(204,204,204,.51);width:360px;height:270px;position:absolute; opacity:0;}
+.lone .touch1:hover,.lone .touch2:hover,.lone .touch3:hover,.lone .touch4:hover{opacity:1;transition:0.5s linear;color:rgba(0,0,51,1);}
+.lone table tr td{padding:15px;}
+a h2{color:rgba(153,0,0,1);}
+#wai #four .talk table tr td img { opacity:.5;
+}
+#wai #four .talk table tr td{padding-left:20px;}
+.talk h3 a{color:rgba(255,255,153,.61);}
+.talk:hover{border:2px solid rgba(255,255,255,1);}
+</style>
+
+</head>
+
+<body>
+<div id="wai">
+   <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%" class="t">
+  <a href="register.html" >注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+     <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height="48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+</div>
+<div class="one"><ul>
+  <li><a href="#">新手指导</a></li>
+  <li><a href="#">游戏介绍</a>
+    <ul>
+      <li><a href="#">游戏基础</a></li>
+  <li><a href="#">选择单位和建筑</a></li>
+  <li><a href="#">下达指令</a></li>
+  <li><a href="#">资源</a></li>
+  <li><a href="#">入口</a></li>
+  <li><a href="#">侦查和战场迷雾</a></li>
+    </ul>
+  </li>
+  <li><a href="#">操作介绍</a></li>
+  <li><a href="#">战役介绍</a>
+    <ul><li><a href="#">自由之翼</a></li>
+  <li><a href="#">虫群之心</a></li>
+  <li><a href="#">虚空之遗</a></li>
+  </ul></li>
+  <li><a href="#">人类介绍</a>
+  </li>
+  <li><a href="#">星灵介绍</a>
+   </li>
+    <li><a href="#">异虫介绍</a>
+   </li>
+    
+</ul>
+</div>
+<div id="two">
+<div class="lone"><div class="touch1"><a href="#"><table width="360" border="0">
+  <tr>
+    <td height="82"><h2>和谷歌人工智能DeepMind《星际争霸II》战队进行交流</h2></td>
+  </tr>
+  <tr><td height="47">DeepMind人工智能研究员Oriol Vinyals目前正在开发一款精通《星际争霸Ⅱ》的机器人，或称之为智能体</td></tr>
+  <tr>
+    <td height="100">&nbsp;</td>
+  </tr>
+</table></a>
+</div><img src="../images/xingji/xingji7.png" width="360" height="270"></div>
+<div class="lone"><div class="touch2">
+<a href="#">
+<table width="360" border="0">
+  <tr>
+    <td height="82"><h2>进化完成：重新构想《星际争霸II》经典兵种</h2></td>
+  </tr>
+  <tr><td height="47">当一组不到20人左右的暴雪开发人员启动初代《星际争霸》的概念时，他们并未面临超乎自身想象的诸多限制——以及紧迫的交期。真的，他们的主要目标不过是尝试制作一个有点酷的科幻游戏罢了。</td></tr>
+</table>
+</a></div><img src="../images/xingji/xingji8.png" width="360" height="270"></div>
+<div class="lone"><div class="touch3"><a href="#">
+<table width="360" border="0">
+  <tr>
+    <td height="80"><h2>合作任务：《虚空之遗》</h2></td>
+  </tr>
+  <tr>
+    <td height="47">合作任务是《虚空之遗》带来的全新游戏模式，让你可以和一名好友在紧张刺激、目标多样的任务中共同对抗强大的敌人。你可以使用《星际争霸》中的传奇人物作为你的指挥官，如詹姆斯·雷诺、莎拉·凯瑞甘或是大主教阿塔尼斯，用他们各具特色的玩法和战斗技能帮你赢得战斗的胜利。</td></tr>
+</table></a></div><img src="../images/xingji/xingji9.png" width="360" height="270"></div>
+<div class="lone"><div class="touch4"><a href="#">
+<table width="360" border="0">
+  <tr>
+    <td height="73"><h2>2018年第一赛季新天梯地图</h2></td>
+  </tr>
+  <tr>
+    <td height="47">新的一年，新的赛季，新的地图！</td></tr>
+  <tr>
+    <td height="100">&nbsp;</td>
+  </tr>
+</table></a></div><img src="../images/xingji/xingji10.png" width="360" height="270"></div>
+</div>
+<div id="three">
+  <div id="five">
+  <h2>媒体推荐</h2>
+  <ul>
+    <li><a href="#">壁纸</a></li>
+    <li><a href="#">原画</a></li>
+    <li><a href="#">视频</a></li>
+    <li><a href="#">音频</a></li>
+    <li><a href="#">截图</a></li>
+    <li><a href="#">下载</a></li>
+    <li><a href="#">服装图库</a></li>
+    <li><a href="#">玩家画廊</a></li>
+    <li><a href="#">漫画作品</a></li>
+    
+  </ul>
+  </div>
+  <div id="five">
+    <h2>游戏大厅</h2>
+  <ul>
+    <li><a href="#">精选地图</a></li>
+    <li><a href="#">RPG地图</a></li>
+    <li><a href="#">塔防地图</a></li>
+    <li><a href="#">地图编辑器</a></li>
+  </ul>
+</div>
+</div>
+<div id="four">
+  <h2>论坛中心</h2>
+  <div class="talk"><table width="600" border="0">
+  <tr>
+    <td width="86" height="75"><img src="../images/xingji/1.jpg" width="50" height="44"></td>
+    <td width="504"><h3><a href="#">综合讨论区</a></h3>
+      <p>讨论星际争霸的一切</p></td>
+  </tr>
+</table>
+</div>
+  <div class="talk">
+  <table width="600" border="0">
+  <tr>
+    <td width="86" height="75"><img src="../images/xingji/3.jpg" width="50" height="44"></td>
+    <td width="487"><h3><a href="#">新手专区</a></h3>
+      <p>新手在此提出游戏战术问题，将会有高手告诉你如何从青铜一步步进化</p></td>
+  </tr>
+</table></div>
+  <div class="talk">
+  <table width="600" border="0">
+  <tr>
+    <td width="86" height="75"><img src="../images/xingji/4.jpg" width="50" height="44"></td>
+    <td width="487"><h3><a href="#">活动讨论区</a></h3>
+      <p>官方活动获奖名单公布、活动内容发布区</p></td>
+  </tr>
+</table></div>
+</div>
+<div id="divd">
+<p>&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p></div>
+<div id="apDiv8"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="4,6,48,48" href="#top">
+  </map>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>
