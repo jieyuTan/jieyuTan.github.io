@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魔兽世界</title>
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script type="text/javascript" src="../javascript/jquery-3.2.1.js">
+</script>
+<script src="../javascript/loding.js"></script>
+
+<style>
+*{
+	margin:0;
+	padding:0;}
+#wai {
+	height:auto;}
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: #3a4062;
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#divg a {
+	padding-left: 10px;
+	padding-top: 10px; 
+	text-decoration: none;
+	color: #666;
+	font-family:"微软雅黑";
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 85%;
+	top: 70px;
+	background-color: #384067;
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#first {
+	width:230px;
+	height:400px;
+	margin-top:40px;
+	margin-left:9%;
+	background-color: #9ea6b9;
+	float:left;
+	position:relative;
+	font-size:18px;
+	border:rgba(255,255,255,0.5) solid 1px;
+}
+#wai #second {
+	position:relative;
+	float:left;
+	height: 1145px;
+	width: 450px;
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	background-color: #9ea6b9;
+}
+#wai #second #newhero, #wai #second #downcity,#wai #second #newmap, #wai #second #repair{
+	width: 375px;
+	margin:33px;
+	position:relative;
+	float:left;
+	border:solid 1px #FFFFFF;
+}
+#wai #second #repair {
+	height: 220px;
+	background:url(../images/moshou/moushou6.png) no-repeat 50% 50%;}
+#wai #second #newmap {
+	height: 225px;
+	background:url(../images/moshou/moshou5.png) no-repeat 50% 50%;}
+#wai #second #downcity {
+	height: 240px;
+	background:url(../images/moshou/moushou2.png) no-repeat 50% 50%;
+	}
+#wai #second #newhero{
+	height: 200px;
+	background:url(../images/moshou/moshou4.png) no-repeat 50% 50%;
+}
+.topic {
+	height: 50px;
+	width: 374px;
+	font-family:"黑体";
+	font-size:24px;
+	text-align:center;
+	line-height:45px;
+	border:solid 1px #FFFFFF;
+	color:rgba(255,255,153,.81);
+	background-color:rgba(0,0,102,.31);
+}
+.topic a:hover {
+	background-color:rgba(0,0,102,.51)
+	font-size:26px;
+}
+
+
+
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+#apDiv3 {
+	position: absolute;
+	width: 373px;
+	height: 153px;
+	z-index: 4;
+	left: 32px;
+	top: 85px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 374px;
+	height: 194px;
+	z-index: 5;
+	left: 32px;
+	top: 352px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 372px;
+	height: 182px;
+	z-index: 11;
+	left: 34px;
+	top: 659px;
+}
+#apDiv6 {
+	position: absolute;
+	width: 371px;
+	height: 170px;
+	z-index: 11;
+	left: 33px;
+	top: 955px;
+}
+#v,#w {
+	font-size:18px;}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 33.8%;
+	top: 70px;
+	background-color: rgba(58,64,98,0.8);
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+	#divw{
+		background:url(../images/moshou/moshou7.png) no-repeat;
+		background-position:bottom;
+}
+#apDiv8 {
+	position: absolute;
+	width: 633px;
+	height: 78px;
+	z-index: 1;
+	left: 420px;
+	top: 390px;
+	opacity:0.5;
+}
+#apDiv9 {
+	position: absolute;
+	width: 230px;
+	height: 607px;
+	z-index: 102;
+	left: 9%;
+	top: 900px;
+	background:rgba(204,204,204,.51);
+	overflow:hidden;
+	border:rgba(255,255,255,1) solid 2px;
+}
+#apDiv9 ul li {
+	list-style-type: none;
+}
+#apDiv9 ul li a {
+	font-size: 20px;
+	font-weight: bolder;
+	color: rgba(0,0,51,1);
+	background-color: rgba(255,255,204,1);
+	text-align: center;
+	float: left;
+	height: 40px;
+	width: 150px;
+	line-height: 40px;
+	margin-top: 20px;
+	margin-right: 40px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	box-shadow:rgba(102,102,102,1) 3px 2px;
+}
+#apDiv9 ul li a:hover {
+	background:rgba(0,0,51,.61);
+	color:rgba(255,255,204,1);
+	height: 40px;
+	width: 150px;
+	transform:rotate(-10deg);
+	border-radius:5px;
+}
+#apDiv12 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 90%;
+	opacity: 0.4;
+}
+</style>
+</head>
+
+<body>
+<div id="apDiv9">
+  <p><img src="../images/ms1.jpg" width="230" height="135"></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <ul><li><a href="#">游戏剧情</a></li>
+  <li><a href="#">游戏特色</a></li>
+  <li><a href="#">场景地图</a></li>
+  <li><a href="#">游戏攻略</a></li>
+  <li><a href="#">英雄人物</a></li>
+  </ul>
+  <p>&nbsp;</p>
+</div>
+<div id="wai">
+   <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%">
+  <a href="register.html" class="t">注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		  &nbsp; &nbsp; &nbsp;
+		 <input id="statesubmit" type="submit" name="submit" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+      <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height="48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+<div id="apDiv8">
+<audio controls>
+    <source src="../music/Russell Brower - wow_main_theme.mp3"></audio></div>
+</div>
+<div id="first">
+<ul>
+	<li><a href="#newhero">全新英雄职</a></li>
+	<li><a href="#downcity">执政团之座地下城</a></li>
+    <li><a href="#newmap">全新地图阿古斯星球</a></li>
+   <li><a href="#repair">7.3版本在线修正</a></li>
+</ul>
+</div>
+<div id="second">
+<div id="newhero">
+    <div class="topic">
+      <table width="374" border="0">
+        <tr>
+          <td>全新英雄职</td>
+          <td align="right"><button class="btn1" style="width:50px; height:50px;border-radius:25px;background-color:rgba(204,204,204,0.61);border:0px;color:rgba(51,51,51,1)">查看</button></td>
+        </tr>
+      </table>
+      
+    </div>
+    </div>
+  <div id="apDiv3">
+    <table width="367" border="0">
+      <tr>
+        <td width="361" height="51">恶魔猎手</td>
+        </tr>
+      </table>
+    <table width="368" border="0">
+      <tr>
+        <td width="362" height="95"><p>&nbsp; 恶魔猎手自愿接受了来自燃烧军团的禁忌力量。</p>
+          <p>他们驾驭邪能与混乱魔法，掌握了变身能力与幽灵视,依靠令人生畏的敏捷追猎与抵御最危险的对手</p></td>
+        </tr>
+    </table>
+  </div>
+    <div id="downcity">
+    <div class="topic">
+      <table width="374" border="0">
+        <tr>
+          <td width="311">执政团之座地下城</td>
+          <td width="53" align="right"> <button class="btn2" style="width:50px; height:50px;border-radius:25px;background-color:rgba(204,204,204,0.61);border:0px;color:rgba(51,51,51,1)">查看</button></td>
+        </tr>
+      </table>
+     
+    </div>
+</div>
+    <div id="apDiv4">
+      <table width="367" height="180" border="0">
+        <tr>
+          <td><p>废弃已久的执政团之座曾经是艾瑞达的权力中心，现已被虚空和影卫部队占领。在这座地下城的大厅之中，你将面对新的挑战，并了解德莱尼的一名宝贵纳鲁盟友的悲惨命运。</p>
+            <p><STRONG>地点： </STRONG>阿古斯<BR>
+              <STRONG>难度：</STRONG>英雄和史诗<BR>
+              <STRONG>等级：</STRONG>110<BR>
+          <STRONG>首领数量：</STRONG>4</p></td>
+        </tr>
+      </table>
+    </div>
+    
+  <div id="newmap">
+    <div class="topic">
+      <table width="374" border="0">
+        <tr>
+          <td width="296">全新地图阿古斯星球</td>
+          <td width="68" align="right"><button class="btn3" style="width:50px; height:50px;border-radius:25px;background-color:rgba(204,204,204,0.61);border:0px;color:rgba(51,51,51,1)">查看</button></td>
+        </tr>
+      </table>
+      
+    </div>
+    </div>
+    
+  <div id="apDiv5">
+    <table width="368" border="0">
+      <tr>
+        <td>&nbsp; 布满邪能伤痕的阿古斯星球在天空中赫然耸现，艾泽拉斯最伟大的英雄们必须做好准备，他们将投身于一个孤注一掷的任务，深入燃烧军团大本营的最核心地带。若成功，艾泽拉斯将终于迎来和平；若失败，所有星球都将化为灰烬。反抗燃烧军团的战斗终于迎来了最后关头</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+  </div>
+  <div id="repair">
+    <div class="topic">
+      <table width="374" border="0">
+        <tr>
+          <td>7.3版本在线修正</td>
+          <td align="right"><button class="btn4" style="width:50px; height:50px;border-radius:25px;background-color:rgba(204,204,204,0.61);border:0px;color:rgba(51,51,51,1)">查看</button></td>
+        </tr>
+      </table>
+      </div>
+    
+</div>
+  <div id="apDiv6">
+    <table width="365" height="149" border="0">
+      <tr>
+        <td>&nbsp; 本篇在线修正列表为《魔兽世界：军团再临》7.3版本相关问题的修正与更新说明。在线修正无需更新客户端。某些在线修正将在执行时即刻生效，某些在线修正则需重启服务器才会生效。请注意，某些问题仍需通过客户端更新才能修正。本列表将随着新增的在线修正内容持续更新</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="news">
+  <div class="reidan">
+    <div id="newsabout"><a href="#">最新动态</a></div>
+    <div id="line">
+    <ul><li><a href="#" title="魔兽同人画作分享 红龙女王与希尔瓦娜">魔兽同人画作分享 红龙女王与希尔瓦娜斯</a></li>
+    <li><a href="#" title="7.35PTR：大使馆附近增加了同盟种族NPC">7.35PTR：大使馆附近增加了同盟种族NPC</a></li>
+    <li><a href="http://wow.duowan.com/1712/377608710010.html" target="_blank" title="M王座战报 阿尔法亚洲首杀寂灭者阿古斯">M王座战报 阿尔法亚洲首杀寂灭者阿古斯</a></li>
+    <li><a href="#" title="M王座战报 Memento世界第三击杀阿古斯">M王座战报 Memento世界第三击杀阿古斯</a></li>
+    <li><a href="#" title="魔兽世界同人画作分享 神秘莫测的迷踪岛">魔兽世界同人画作分享 神秘莫测的迷踪岛</a></li>
+    </ul></div>
+  </div>
+  <div class="reidan">
+    <div id="newsabout"><a href="#">论坛相关</a></div>
+    <div id="line">
+     <ul><li><a href="#" title="魔兽玩家副本电影：军团战纪梦魇终结篇">魔兽玩家副本电影：军团战纪梦魇终结篇</a></li>
+    <li><a target="_blank" href="http://bbs.duowan.com/thread-45166558-1-1.html" title="北岸初晴解说 史诗翡翠梦魇视频攻略">北岸初晴解说 史诗翡翠梦魇视频攻略</a><a href="#"></a></li>
+    <li><a target="_blank" href="http://bbs.duowan.com/thread-44825442-1-1.html" title="7.0相关玩家科普：新界面和UI设置指南">7.0相关玩家科普：新界面和UI设置指南</a></li>
+    <li><a target="_blank" href="http://bbs.duowan.com/thread-45157165-1-1.html" title="10层茂盛+大秘境15层魔法回廊视频分享">10层茂盛+大秘境15层魔法回廊视频分享</a></li>
+    <li><a target="_blank" href="http://bbs.duowan.com/thread-44967358-1-1.html" title="大神告诉你：7.0神器插槽圣物是干嘛用的">大神告诉你：7.0神器插槽圣物是干嘛用</a></li>
+    </ul></div>
+   </div>
+</div>
+<div id="divd">
+  <p>&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p></div>
+<div id="apDiv12"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="5,6,45,46" href="#top">
+  </map>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		});
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('.btn1').click(function() {
+		$('#apDiv3').slideToggle(1000);
+		});
+				
+		$('.btn2').click(function() {
+	    $('#apDiv4').slideToggle(1000);
+		});
+		
+		$('.btn3').click(function() {
+	    $('#apDiv5').slideToggle(1000);
+		});
+		
+		$('.btn4').click(function() {
+	   	$('#apDiv6').slideToggle(1000);
+		});
+		});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>

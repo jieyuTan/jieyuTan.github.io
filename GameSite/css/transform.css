@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.box{
+	position:relative;
+	width:100px;
+	height:100px;
+	transform-style:preserve-3d;
+	perspective:1600px;
+	transform-origin:50% 50% 100px;
+	animation:imgrot ease 15s infinite;
+	}
+.box div:nth-child(1){
+	background:url(IMG/1901.png) no-repeat center center;
+	background-size:100% 100%;
+	transform-origin:top;
+	transform: rotatex(50deg) translatez(0px);}
+.box div:nth-child(2){
+	background: url(IMG/8801.jpg) no-repeat center center;
+	background-size:100% 100%;
+	transform-origin:bottom;
+	transform: rotatex(-90deg) translatez(0px);}
+.box div:nth-child(3){
+	transform-origin:left;
+	transform: rotatey(-90deg) translatez(0px);}
+.box div:nth-child(4){
+		transform-origin:right;
+	transform: rotatey(90deg) translatez(0px);}
+	.box div:nth-child(5){
+	transform:translatez(0px);}
+	.box div:nth-child(6){
+	transform: translatez(100px);}
+@keyframes imgrot{
+	from{transform:rotatey(0deg) rotatex(0deg) rotatez(0deg);}
+	to{transform:rotatey(360deg) rotatex(360deg) rotatez(360deg);}
+	}

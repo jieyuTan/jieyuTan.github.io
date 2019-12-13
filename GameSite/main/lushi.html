@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>炉石传说</title>
+<link rel="stylesheet" type="text/css" href="../css/lodin.css">
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script src="../javascript/jquery-3.2.1.js"> </script>
+<script src="../javascript/loding.js"></script>
+
+<style>
+*{
+	padding:0;
+	margin:0;
+	}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+}
+#divw {
+	background: url(../images/lushi/lushi7.png) no-repeat 50% 50%;}
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: #3a4062;
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 85%;
+	top: 70px;
+	background-color: #384067;
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 33.7%;
+	top: 70px;
+	background-color: #3a4062;
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+.first {
+	width:320px;
+	height:350px;
+	margin-top:10px;
+	margin-left:30px;
+	margin-right:90px;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	}
+#v,#w {
+	font-size:18px;}
+#wai .one {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 700px;
+	width: 330px;
+	padding-top: 60px;
+	padding-left: 20px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai .one ul li {
+	list-style-type:none;
+}
+#wai .one ul li a {
+	background-color: rgba(51,51,51,.51);
+	float: left;
+	height: 30px;
+	width: 295px;
+	font-family:"黑体";
+	padding-left: 10px;
+	line-height:30px;
+	color:rgba(255,255,255,1);
+}
+#wai .one ul li ul li a{
+	margin-left:10px;
+	width:285px;
+	color:rgba(255,255,255,0.81);
+}
+#wai .one ul li a:hover  {
+	color: rgba(102,153,204,1);}
+#wai .one ul li ul li a:hover {
+	background-color:rgba(255,255,204,0.81);
+	transform:translateX(5px);
+	color:rgba(153,0,0,1);}
+#wai #two {
+	background-color: rgba(204,204,204,.51);
+	margin-top:20px;
+	margin-left:20px;
+	width:770px;
+	padding:25px;
+	height:710px;
+	float:left;
+	height: auto;
+}
+#wai #two h3 a {
+	color:rgba(153,0,0,0.51);}
+#wai #two h3 a:hover {color:rgba(153,0,0,1)}
+#wai #two img a:hover {
+	border:solid 1px #FFFFFF;}
+
+#myc {height: 6px;
+	width: 700px;
+	background:rgba(255,255,255,1);}
+#apDiv8 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 90%;
+	opacity: 0.4;
+}
+</style>
+
+</head>
+
+<body>
+<div id="wai">
+   <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%"  class="t">
+  <a href="register.html">注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+     <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height="48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+</div>
+<div class="one"><ul>
+  <li><a href="#">游戏概览</a>
+    <ul>
+      <li><a href="#">基础内容</a></li>
+  <li><a href="#">游戏指南</a></li>
+  <li></li>
+  <li></li>
+  <li></li>
+    </ul>
+  </li>
+  <li><a href="#">游戏特色</a></li>
+  <li><a href="#">版本</a>
+    <ul>
+  <li><a href="#">狗头人与地下世界</a></li>
+  <li><a href="#">冰封王国的骑士</a></li>
+  <li><a href="#">勇闯安戈洛</a></li>
+  <li><a href="#">龙争虎斗加基森</a></li>
+  <li><a href="#">卡拉赞之夜</a></li>
+  <li><a href="#">上古之神的低语</a></li>
+  <li><a href="#">探险者协会</a></li>
+  <li><a href="#">冠军的试炼</a></li>
+  <li><a href="#">黑石山的火焰</a></li>
+  <li><a href="#">地精大战侏儒</a></li>
+  <li><a href="#">纳克萨玛斯的诅咒</a></li>
+  </ul></li>
+  <li><a href="#">游戏攻略</a></li>
+  <li><a href="#">基础知识</a></li>
+    <li><a href="#">九大职业</a></li>
+    <li><a href="#">炉石大事件</a></li>
+</ul>
+</div>
+<div id="two"><table width="748" border="0">
+  <tr>
+    <td width="339" height="150"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/lushi/lushi2.png" width="250" height="141"></td>
+    <td width="399"><h3><a href="#">2018全民实力赛春季赛报名开启 56个城市等你来战</a></h3>
+      <p>&nbsp;&nbsp;2018年暴雪游戏全民实力赛春季赛正式开启，《炉石传说》项目覆盖全国28个赛区，56个城市。</p></td>
+  </tr>
+  <tr>
+    <td height="24" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="159"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/lushi/lushi0.png" width="250" height="141"></td>
+    <td><h3><a href="#">乱斗模式——“决战黑石山”已经开放</a></h3>
+      <h3><a href="#"></a></h3>
+      <p>&nbsp;&nbsp;&nbsp;黑石山的两大势力再次碰撞！这一次，他们一定要决出胜负……你会站在哪一边呢？</p></td>
+  </tr>
+  <tr>
+    <td height="27" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="159"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/lushi/lushi4.png" width="250" height="158"></td>
+    <td><h3><a href="#">设计师聚焦：即将到来的竞技场改动</a></h3>
+      <p>针对即将到来的10.4版本，首席系统设计师Kris Zierhut将探讨一些竞技场方面的改动！观看下方视频，了解本次更新详情。</p></td>
+  </tr>
+  <tr>
+    <td height="25" colspan="2"><center><div id="myc"></div></center></td>
+    </tr>
+  <tr>
+    <td height="176"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/lushi/lushi8.jpg" width="250" height="141"></td>
+    <td><h3><a href="#">展翅高飞的渡鸦年</a></h3>
+      <p>每一个《炉石传说》的新年度都由闪耀在艾泽拉斯夜空中的星座之一来命名。一个全新的星座，宣告着又一个年度的开启，酒馆内外四处洋溢着欢庆的气氛！</p></td>
+  </tr>
+</table>
+</div>
+<div id="divd">
+  <p>&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p></div>
+<div id="apDiv8"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="4,6,48,48" href="#top">
+  </map>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>

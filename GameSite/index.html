@@ -1,0 +1,566 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>畅玩游戏</title>
+<link rel="stylesheet" type="text/css" href="css/navigation.css">
+<script type="text/javascript" src="javascript/jquery-3.2.1.js">
+</script>
+
+<style>
+  *{
+  	padding:0;
+  	margin:0;
+	}
+	#wai{height:1600px;}
+  #apDiv1 {
+  	position: absolute;
+  	width: 145px;
+  	height: 210px;
+  	z-index: 93;
+  	left: 15%;
+  	top: 70px;
+   	background-color: #3a4062;
+  	color:#b48c95;
+  	text-align:center;
+  	display:none;
+    }
+  #apDiv1 a {
+  	color:#fff;
+  }
+  #apDiv1 a:hover {
+  	color:rgba(153,0,0,1);
+  	transform:translateY(-5px);
+  }
+  #divg a {
+  			padding-left: 10px;
+  			padding-top: 10px; 
+  			text-decoration: none;
+  			color: #666;
+  			font-family:"微软雅黑";
+  		}
+  #apDiv2 {
+  	position: absolute;
+  	width: 180px;
+  	height: 120px;
+  	z-index: 92;
+  	left: 85%;
+  	top: 70px;
+  	background-color: #384067;
+  	text-align: left;
+  	display:none;
+  	padding:30px 10px;
+  }
+  #apDiv3 {
+  	position: absolute;
+  	z-index: 4;
+  	left: 60%;
+  	top: 430px;
+  }
+  #apDiv4 {
+  	position: absolute;
+  	z-index: 5;
+  	left: 60%;
+  	top: 610px;
+  }
+  a:link {
+  	color: #666;
+  	text-decoration: none;
+  }
+  #apDiv5 {
+  	position: absolute;
+  	width: 648px;
+  	height: 190px;
+  	z-index: 6;
+  	left: 21%;
+  	top: 117px;
+  }
+  #apDiv6 {
+  	position: absolute;
+  	z-index: 7;
+  	left: 60%;
+  	top: 800px;
+  	font-size: 22px;
+  }
+  #apDiv7{
+  	position: absolute;
+  	z-index: 8;
+  	left: 60%;
+  	top: 850px;
+  }
+  #apDiv8  {
+  	position: absolute;
+  	z-index: 9;
+  	left: 60%;
+  	top: 880px;
+  }
+  #apDiv9 {
+  	position: absolute;
+  	z-index: 10;
+  	left: 60%;
+  	top: 930px;
+  }
+  #apDiv3, #apDiv4,#apDiv6,#apDiv7,#apDiv8, #apDiv9 {
+  	width: 325px;
+  	height: 636px;
+  	background-color:#9ea6b9;
+  	text-align: left;
+  	padding-top: 20px;
+  	padding-left: 25px;
+  	font-family: "黑体";
+  	color:#4e4967;
+  	font-size:18px;
+  	display:none;
+  }
+  #wai #divd {
+  	margin-top: 30px;
+  }
+  a:visited {
+  	color: rgba(102,102,102,0.51);
+  	text-decoration: none;
+  }
+  a:hover {
+  	color:rgba(255,255,153,.81);
+  	text-decoration: none;
+  	
+  }
+  a:active {
+  	text-decoration: none;
+  }
+
+  #apDiv10 {
+  	position: absolute;
+  	width: 800px;
+  	height: 88px;
+  	z-index: 98;
+  	left: 257px;
+  	top: 70px;
+  	background-color: #3a4062;
+  	padding: 10px;
+  	display:none;
+  }
+  #wai #apDiv10 table{
+  	text-align:center;}
+  #wai #apDiv10 table tr td p a {
+  	text-align:center;
+  	color:rgba(204,204,204,1);
+  }
+  #wai #apDiv10 table tr td p a:hover {
+  	color:rgba(255,255,204,1);
+  	transform:translate(-5px,2px);
+  }
+  #divw #apDiv11 {
+  	position: reletive;
+  	width: 100px;
+  	height: 290px;
+  	z-index: 12;
+  	left: 75px;
+  	top: 70px;
+  	background-color: rgba(204,204,204,.51);
+  	padding: 30px;
+  }
+  #apDiv11 ul li{ width:170px; }
+  #apDiv12 {
+  	position: absolute;
+  	width: 18.9%;
+  	height: 280px;
+  	z-index: 13;
+  	left: 76.3%;
+  	top: 11.9%;
+  	padding: 30px;
+  }
+  #v,#w { font-size:18px;}
+  h2 {  
+    color:rgba(153,0,0,.81);
+    margin-bottom:8px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(244,244,244,.3);
+  }
+  h4 {
+  	color: rgba(0,0,0,0.81);
+  	margin-bottom: 15px;
+  }
+  p {color:rgba(230,230,0,.8);}
+  #apDiv13 {
+  	position: fixed;
+  	width: 98px;
+  	height: 115px;
+  	z-index: 99;
+  	left: 96%;
+  	top: 93%;
+  	opacity: 0.4;
+  }
+  #wai #divw {
+  	height: 21.2%;
+  	margin-top:35px;
+  }
+</style>
+</head>
+
+<body>
+<div id="wai">
+  <div id="divh">
+    <table width="100%">
+      <tr>
+        <td width="5%" height="62">&nbsp;</td>
+        <td width="10%"><img src="images/LOGO.png" width="60" height="60" style="border-radius:35px"><a id="zhiding"></a></td>
+        <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+        <td width="15%" class="t"><a href="index.html">商城</a></td>
+        <td width="15%" class="t"><a href="main/news.html">新闻</a></td>
+        <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+          </td>
+        <td id="y" width="15%">&nbsp;</td>  
+       <td id="v" width="5%" class="t">
+      <a href="main/register.html">注册</a></td>
+    <td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+  <div id="apDiv11">
+    <ul>
+      <li><a href="#">浏览分类</a>
+        <ul><li><a href="#">热销商品</a></li>
+          <li><a href="#">最近更新</a></li>
+          <li><a href="#">新品</a></li>
+          <li><a href="#">即将推出</a></li>
+          </ul></li></ul><br><br>
+      <ul><li><a href="#">推荐</a>
+        <ul><li><a href="#">由好友推荐</a></li>
+        <li><a href="#">由鉴赏家推荐</a></li>
+        <li><a href="#">标签</a></li>
+        </ul></li></ul></div>
+<div id="apDiv12">
+<h2>猜猜猜</h2>
+<div class="main">
+	<h4><a href="#">1.什么话可以世界通用?</a> </h4>
+	    <div class="answer">
+      <p>电话</p></div>
+	<h4><a href="#">2.世界上最难的一道题是哪道题？</a></h4>
+	    <div class="answer">
+      <p>这一题</p></div>
+	<h4><a href="#">3.铅笔姓什么？</a></h4>
+	    <div class="answer">
+      <p>萧&nbsp; 削(萧)铅笔。</p></div>
+	<h4><a href="#">4.新版的纸币，竟然印得不一样，为什么？</a></h4>
+      <div class="answer">
+        <p>号码不一样</p>
+          </div>
+          <h4><a href="#">5.什么人是不用电的？</a></h4>         
+	    <div class="answer">
+          <p>缅甸人</p>
+      </div>
+      <h4><a href="#">6.为什么大部份佛教徒都在北半球？</a></h4>         
+	    <div class="answer">
+          <p>南“无”阿弥陀佛</p>
+      </div>
+      <h4><a href="#">7.美丽的公主结婚以后就不挂蚊帐了，为什么？ </a></h4>     
+	    <div class="answer">
+          <p>嫁给了青蛙王子</p>
+      </div>
+</div>
+</div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+      <td width="117"><p><a href="main/moshou.html"><img src="images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="main/moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="main/shouwang.html"><img src="images/shouwang/shouwanglogo.png" width="100" height="56"></p>
+        <p><a href="main/shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="main/anhei.html"><img src="images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="main/anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="main/fengbao.html"><img src="images/fengbao/fengbaologo.png" width="100" height="48"></p>
+        <p><a href="main/fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="main/lushi.html"><img src="images/lushi/logo.jpg" width="100" height="54"></p>
+        <p><a href="main/lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="main/xingji.html"><img src="images/xingji/xingjilogo.png" width="150" height="51"></p>
+        <p><a href="main/xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="main/moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="main/shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="main/anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="main/fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="main/lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="main/xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+  <div id="apDiv5">
+    <form name="slideform">
+    	<div align="center">
+    	  <input name="" type="button" id="prevbtn" style="width:40px; height:40px;  border:0; background:url(images/pre.png) no-repeat left top">&nbsp; &nbsp;
+           <img src="images/anhei1.png" name="image_0" width="457" id="slideimage">&nbsp;&nbsp; 
+    	  <input name="" type="button" id="nextbtn" style="width:40px; height:40px;  border:0; background:url(images/next.png) no-repeat left top">
+    	  </div>
+    </form></div>
+    </div>
+
+<div id="divs">
+<a href="main/moshou.html">
+    <table width="600" height="181" border="0">
+    <tr>
+       <td width="270">&nbsp; &nbsp; <img src="images/moshou/moshou3.png" width="250" height="141"></td>
+                      <td width="297">名称：World of Wararaft （魔兽世界）<br>
+                        游戏平台：PC<br>
+                        所属系列：魔兽系列<br>
+                        游戏画面：3D<br>
+                        游戏语言：英语，中文等 </td>
+    </tr>
+    </table>
+      </a>
+</div>
+<div id="apDiv3">
+  <table width="296" height="600" border="0">
+    <tr>
+      <td width="290" height="107">娱乐方式：<br>
+        冒险、完成任务、新的历险、探索未知的世界、征服怪物</td>
+      </tr>
+    <tr>
+      <td><img src="images/moshou/moshou4.png" width="250" height="141"></td>
+      </tr>
+    <tr>
+      <td><img src="images/moshou/moshou5.png" width="250" height="141"></td>
+      </tr>
+    <tr>
+      <td><img src="images/moshou/moushou2.png" width="250" height="156"></td>
+      </tr>
+  </table>
+</div>
+<div id="diva">
+<a href="main/shouwang.html">
+<table width="600" height="181" border="0">
+    <tr>
+      <td width="270">&nbsp; &nbsp; <img src="images/shouwang/shouwang1.png" width="250" height="122"></td>
+      <td width="297">名称：Overwatch （守望先锋）<br>
+        游戏平台：PC、PS4、XBx One<br>
+        所属系列：暴雪娱乐首款射击游戏<br>
+        游戏画面：3D<br>
+        游戏语言：英语，中文等 </td>
+    </tr>
+  </table>
+  </a></div>
+<div id="apDiv4">
+  <table width="296" height="600" border="0">
+    <tr>
+      <td width="290" height="107">游戏以未来地球为背景，讲述人类、守望先锋成员和智能机械的恩怨纠葛。游戏现有26位英雄(截止到2017年11月25日)，每一位英雄都有各自标志性的武器和技能。</td>
+      </tr>
+    <tr>
+      <td><img src="images/shouwang/shouwang3.png"></td>
+      </tr>
+    <tr>
+      <td><img src="images/shouwang/shouwang5.png"></td>
+      </tr>
+    <tr>
+      <td><img src="images/shouwang/shouwang4.png"></td>
+      </tr>
+  </table></div>
+<div id="divb">
+<a href="main/anhei.html">
+  <table width="600" height="181" border="0">
+    <tr>
+      <td width="270">&nbsp; &nbsp; <img src="images/anhei/anhei4.png" width="250" height="141"></td>
+      <td width="297">名称：Diablo （暗黑破坏神）<br>
+        游戏平台：PC、PS3、XBox 360、PS4、XBox one、Mac<br>
+        所属系列：暗黑破坏神<br>
+        游戏画面：2D、3D<br>
+        游戏语言：英语，中文等 </td>
+    </tr>
+</table>
+</a></div>
+<div id="apDiv6">
+ <table width="296" height="600" border="0">
+    <tr>
+      <td width="290" height="107">最新版本：《暗黑破坏神3：夺魂之镰》<br>
+        游戏中玩家创建属于自己的角色，在一片片暗黑大地上奔跑、杀敌、寻宝、成长，最终打败统治各个大陆的黑暗势力，拯救游戏中的各个种族</td>
+      </tr>
+    <tr>
+      <td><img src="images/anhei/anhei1.png" width="250" height="141"></td>
+      </tr>
+    <tr>
+      <td><img src="images/anhei/anhei2.png" width="250" height="141"></td>
+      </tr>
+    <tr>
+      <td><img src="images/anhei/anhei3.png" width="250" height="156"></td>
+      </tr>
+  </table></div>
+<div id="divc"><a href="main/fengbao.html">
+  <table width="600" height="181" border="0">
+    <tr>
+      <td width="270">&nbsp; &nbsp; <img src="images/fengbao/fengbao.png" width="250" height="142"></td>
+      <td width="297">名称：
+        Heroes of the Storm （风暴英雄）<br>
+        游戏平台：Windows 、Mac OS X<br>
+        游戏画面：3D<br>
+        游戏语言：英语，中文等 </td>
+    </tr>
+</table></a></div>
+<div id="apDiv7">
+<table width="296" height="597" border="0">
+    <tr>
+      <td width="290" height="107">游戏类型:在线多人竞技类、ARTS、MOBA<br>游戏引擎:银河引擎<br>内容主题:魔幻英雄大乱斗</td>
+      </tr>
+    <tr>
+      <td height="158"><img src="images/fengbao/fengbao1.png" width="250" height="143"></td>
+      </tr>
+    <tr>
+      <td height="140"><img src="images/fengbao/fengbao3.png" width="250" height="136"></td>
+      </tr>
+    <tr>
+      <td height="167"><img src="images/fengbao/fengbao2.png" width="250" height="157"></td>
+      </tr>
+  </table></div>
+<div id="divf"><a href="main/lushi.html">
+  <table width="600" height="181" border="0">
+    <tr>
+      <td width="270">&nbsp; &nbsp; <img src="images/lushi/lushi0.png" width="250" height="141"></td>
+      <td width="297">名称：HeartSrone （炉石传说）<br>
+        游戏平台：Windows、Mac、iPhone、Android <br>
+        iPad<br>
+        所属系列：魔兽系列<br>
+        游戏画面：3D<br>
+        游戏语言：英语，中文等 </td>
+    </tr>
+</table></a></div>
+<div id="apDiv8">
+<table width="307" height="611" border="0">
+    <tr>
+      <td width="301" height="111">
+        游戏类型:策略类卡牌游戏    <br>
+        内容主题:魔兽、魔幻、卡牌 <br>
+        最新版本:<br>
+        狗头人与地下世界1.0.0(2017.12.5）<br>
+        游戏特征:卡牌多 <br>
+</td>
+      </tr>
+    <tr>
+      <td height="160"><img src="images/lushi/lushi1.png" width="250" height="124"></td>
+      </tr>
+    <tr>
+      <td height="146"><img src="images/lushi/lushi3.png" width="250" height="136"></td>
+      </tr>
+    <tr>
+      <td height="147"><img src="images/lushi/lushi2.png" width="250" height="141"></td>
+      </tr>
+  </table></div>
+<div id="dive"><a href="main/xingji.html">
+  <table width="600" height="181" border="0">
+    <tr>
+      <td width="270">&nbsp; &nbsp; <img src="images/xingji/xingji3.png" width="250" height="135"></td>
+      <td width="297">名称：StarCraft （星际争霸）<br>
+游戏平台：PC、任天堂64<br>
+游戏画面：3D<br>
+游戏语言：英语，中文等 </td>
+    </tr>
+</table></a></div>
+<div id="apDiv9">
+<table width="307" height="611" border="0">
+    <tr>
+      <td width="301" height="111">
+       游戏类型:即时战略，单机或联网对战<br>
+        内容主题:战争 <br>
+        主要角色虫族、人族、神族
+        </td>
+      </tr>
+    <tr>
+      <td height="160"><img src="images/xingji/xingji1.png" width="250" height="156"></td>
+      </tr>
+    <tr>
+      <td height="146"><img src="images/xingji/xingji2.png" width="250" height="142"></td>
+      </tr>
+    <tr>
+      <td height="147"><img src="images/xingji/xingji3.png" width="250" height="135"></td>
+      </tr>
+  </table>
+</div>
+<div id="divd"><table width="800" border="0">
+  <tr>
+    <td width="438">&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</td>
+    <td width="55"><img src="images/steam.jpg" width="35" height="37"></td>
+    <td width="52"><img src="images/zhanwang.png" width="35" height="36"></td>
+    <td width="237"><img src="images/wenku.png" width="35" height="35"></td>
+  </tr>
+</table>
+</div>
+<div id="apDiv13"><img src="images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="5,5,46,49" href="#zhiding">
+  </map>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('.answer').hide();
+		$('.main h4').click(
+			function() {
+				var $answer = $(this).next('.answer');
+				if($answer.is(':hidden')) {
+					$answer.slideDown();
+					$(this).addClass('close');
+				} else {
+					$answer.fadeOut();
+					$(this).removeClass('close');
+				}
+			});
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+<script src="javascript/EHandler.js"></script>
+<script src="javascript/introduce.js"></script>
+<script src="javascript/loding.js"></script>
+<script src="javascript/imgshow.js"></script>
+</body>
+</html>

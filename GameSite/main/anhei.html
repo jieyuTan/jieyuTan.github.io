@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>暗黑破坏神Ⅲ</title>
+<link rel="stylesheet" type="text/css" href="../css/lodin.css">
+<link rel="stylesheet" type="text/css" href="../css/navigation.css">
+<link rel="stylesheet" type="text/css" href="../css/transform.css">
+<script src="../javascript/jquery-3.2.1.js"> </script>
+<script src="../javascript/loding.js"></script>
+
+<style>
+*{
+	padding:0;
+	margin:0;
+	}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: rgba(102,102,102,0.51);
+	text-decoration: none;
+}
+a:hover {
+	color:rgba(255,255,153,.81);
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+}
+
+#apDiv1 {
+	position: absolute;
+	width: 145px;
+	height: 210px;
+	z-index: 93;
+	left: 15%;
+	top: 70px;
+	background-color: #3a4062;
+	color:#b48c95;
+	text-align:center;
+	display:none;
+}
+#apDiv1 a {
+	color:#fff;
+}
+#apDiv1 a:hover {
+	color:rgba(153,0,0,1);
+	transform:translateY(-5px);
+}
+#apDiv2 {
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	z-index: 92;
+	left: 86%;
+	top: 70px;
+	background-color: #384067;
+	text-align: left;
+	display:none;
+	padding:30px 10px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 800px;
+	height: 98px;
+	z-index: 101;
+	left: 35%;
+	top: 70px;
+	background-color: #3a4062;
+	padding: 10px;
+	display:none;
+}
+#wai #apDiv10 table{
+	text-align:center;}
+#wai #apDiv10 table tr td p a {
+	text-align:center;
+	color:rgba(204,204,204,1);
+}
+#wai #apDiv10 table tr td p a:hover {
+	color:rgba(255,255,204,1);
+	transform:translate(-5px,2px);}
+.first {
+	width:320px;
+	height:350px;
+	margin-top:10px;
+	margin-left:30px;
+	margin-right:90px;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	}
+#v,#w {
+	font-size:18px;}
+#divw {
+	height:2000px;
+	background:url(../images/anhei/anhei5.png) no-repeat 60% 60%;}
+#wai .one {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 700px;
+	width: 330px;
+	padding-top: 60px;
+	padding-left: 20px;
+	margin-top:20px;
+	margin-left:5%;
+}
+#wai .one ul li {
+	list-style-type:none;
+}
+#wai .one ul li a {
+	background-color: rgba(51,51,51,.51);
+	float: left;
+	height: 30px;
+	width: 295px;
+	font-family:"黑体";
+	padding-left: 10px;
+	line-height:30px;
+	color:rgba(255,255,255,1);
+}
+#wai .one ul li ul li a{
+	margin-left:10px;
+	width:285px;
+	color:rgba(255,255,255,0.81);
+}
+#wai .one ul li a:hover  {
+	color: rgba(102,153,204,1);}
+#wai .one ul li ul li a:hover {
+	background-color:rgba(255,255,204,0.81);
+	transform:translateX(5px);
+	color:rgba(153,0,0,1);}
+#wai #two {
+	background-color: rgba(204,204,204,.51);
+	margin:20px;
+	width:750px;
+	padding:30px;
+	height:700px;
+	float:left;
+}
+#wai #two h3 a {
+	color:rgba(153,0,0,0.51);}
+#wai #two h3 a:hover {color:rgba(153,0,0,1)}
+#wai #two img a:hover {
+	border:solid 1px #FFFFFF;}
+#wai #three {
+	background-color: rgba(204,204,204,.51);
+	float: left;
+	height: 320px;
+	width: 450px;
+	padding-top: 20px;
+	padding-left: 30px;
+	margin-left:5%;
+}
+#wai #three table tr td form p label {
+	float: left;
+	width: 250px;
+}
+#wai #three table tr td {
+	color: rgba(0,0,51,1);
+}
+#wai #three h2 {
+	color: rgba(255,102,51,1);
+	border:rgba(255,255,255,1) solid 2px;
+	text-align:center;
+	line-height:30px;
+	border-radius:5px;
+	height: 30px;
+	width: 120px;
+}
+#wai #four {
+	float: left;
+	height: 280px;
+	width: 610px;
+	margin-left: 30px;
+	background-color: rgba(204,204,204,0.51);
+	padding:30px;
+}
+#wai #four h2 {
+	color: rgba(102,0,0,1);
+}
+#wai #four table tr td a {
+	color: rgba(0,0,102,1);
+}
+#wai #four table tr td a:hover {color:rgba(153,0,0,1);
+transform:translateY(-5px);}
+#apDiv8 {
+	position: fixed;
+	width: 98px;
+	height: 115px;
+	z-index: 99;
+	left: 96%;
+	top: 90%;
+	opacity: 0.4;
+}
+</style>
+
+</head>
+
+<body>
+<div id="wai">
+    <div id="divh">
+    <table width="100%">
+  <tr>
+    <td width="5%" height="62"><a id="top"></a></td>
+    <td width="10%"><img src="../images/LOGO.png" width="70" height="68" style="border-radius:35px"></td>
+    <td id="x" width="15%" class="t"><a href="#">游戏</a></td>
+    <td width="15%" class="t"><a href="../index.html">首页</a></td>
+    <td width="15%" class="t"><a href="news.html">新闻</a></td>
+    <td id="y" width="15%" class="t"><a href="#">电子竞技</a>
+      </td>
+    <td id="y" width="15%">&nbsp;</td>  
+   <td id="v" width="5%" class="t">
+  <a href="register.html">注册</a></td>
+<td id="w" width="5%" class="t"><a href="#">登录</a></td></tr></table></div>
+<div id="apDiv10">
+  <table width="810" border="0">
+    <tr>
+     <td width="117"><p><a href="moshou.html"><img src="../images/moshou/moshoulogo.png" width="100" height="57"></a></p>
+        <p><a href="moshou.html">魔兽世界</a></p></td>
+      <td width="126"><p><a href="shouwang.html"><img src="../images/shouwang/shouwanglogo.png" width="100" height="56"></a></p>
+        <p><a href="shouwang.html">守望先锋</a></p></td>
+      <td width="119"><p><a href="anhei.html"><img src="../images/anhei/anheilogo.png" width="100" height="57"></p>
+        <p><a href="anhei.html">暗黑破坏神Ⅲ</a></p></td>
+      <td width="131"><p><a href="fengbao.html"><img src="../images/fengbao/fengbaologo.png" width="100" height="48"></a></p>
+        <p><a href="fengbao.html">风暴英雄</a></p></td>
+      <td width="125"><p><a href="lushi.html"><img src="../images/lushi/logo.jpg" width="100" height="54"></a></p>
+        <p><a href="lushi.html">炉石传说</a></p></td>
+      <td width="166"><p><a href="xingji.html"><img src="../images/xingji/xingjilogo.png" width="150" height="51"></a></p>
+        <p><a href="xingji.html">星际争霸Ⅱ</a></p></td>
+    </tr>
+    </table>
+</div>
+    <div id="apDiv2">
+    <form name="nameform" id="nameform" action="" method="post">
+		<p><label>登录名：</label>
+		<input id="textname" type="text" name="textname"></p>
+		<p>&nbsp;	  </p>
+		<p>
+		  <label>密码：</label>
+		  <input type="text" name="password"></p>
+		 <p><input id="statesubmit" type="submit" name="submit" style="margin-top:15px;" value="登录">
+	  </p>
+	</form></div>
+  <div id="apDiv1">
+  <table width="130" height="210" border="0">
+  <tr>
+    <td width="79"><a href="moshou.html">魔兽世界</a></td>
+  </tr>
+  <tr>
+    <td><a href="shouwang.html">守望先锋</a></td>
+  </tr>
+  <tr>
+    <td><a href="anhei.html">暗黑破坏神Ⅲ</a></td>
+  </tr>
+  <tr>
+    <td><a href="fengbao.html">风暴英雄</a></td>
+  </tr>
+  <tr>
+    <td><a href="lushi.html">炉石传说</a></td>
+  </tr>
+  <tr>
+    <td><a href="xingji.html">星际争霸Ⅱ</a></td>
+  </tr>
+</table>
+</div>
+<div id="divw">
+<div class="box">
+	<img src="../images/leaf.png" width="73" height="75" style="margin:50px;">
+</div>
+</div>
+<div class="one"><ul>
+  <li><a href="#">故事背景</a>
+    <ul><li><a href="#">凯恩之书</a></li>
+  <li><a href="#">凯恩日记</a></li>
+  <li><a href="#">历史年表</a></li>
+    </ul></li>
+  <li><a href="#">游戏特色</a></li>
+  <li><a href="#">地图场景</a>
+    <ul><li><a href="#">第一场景 Tristram 崔斯特瑞姆</a></li>
+  <li><a href="#">第二场景 Caldeum 卡尔蒂姆</a></li>
+  <li><a href="#">第三场景 Arreat Crater 亚瑞特火山口</a></li>
+  <li><a href="#">第四场景 Gardens of Hope 希望之园</a></li>
+  <li><a href="#">第五场景 Westmarch 威斯特玛</a></li>
+  </ul></li>
+  <li><a href="#">游戏攻略</a></li>
+  <li><a href="#">怪物资料</a>
+    <ul><li><a href="#">怪物词缀</a></li>
+  <li><a href="#">屠夫</a></li>
+  <li><a href="#">彼列</a></li>
+  <li><a href="#">阿兹莫丹</a></li>
+  <li><a href="#">迪亚波罗</a></li>
+  <li><a href="#">藏宝哥布林</a></li>
+    </ul></li>
+    <li><a href="#">黑暗深渊</a></li>
+    <li><a href="#">凯恩之角</a></li>
+</ul>
+</div>
+<div id="two"><table width="748" border="0">
+  <tr>
+    <td width="427" height="170"><a href="#"><img src="../images/anhei/anhei5.jpeg" width="400" height="130"></a></td>
+    <td width="311"><h3><a href="#">物理多重队先拿1分 你觉得哪种多重更强？</a></h3>
+      <p>&nbsp;&nbsp;  &ldquo;火多重天下第一！&rdquo;这句话如今似乎已经不再适用，因为即使在同辈中也多了一个对手，那就是物理多重。一直以来，多重射击的多重火力符文就一直是玩家认知中的最强符文，不过全线齐射符文最近却异军突起了。</p></td>
+  </tr>
+  <tr>
+    <td height="185"><a href="#"><img src="../images/anhei/anhei6.jpeg" width="400" height="130"></a></td>
+    <td><h3><a href="#">暗黑与魔兽交织后的产物 或许才是暗黑X的真身</a></h3>
+      <p>&nbsp;&nbsp;&nbsp; 在刚刚过去的暴雪嘉年华上，&ldquo;争霸艾泽拉斯&rdquo;的问世重新点燃了玩家的热情。但是对于暗黑破坏神的玩家来说，本届嘉年华给他们带来的只有无限的失望，那么暗黑系列真的已经被暴雪放弃了吗？</p></td>
+  </tr>
+  <tr>
+    <td height="167"><a href="#"><img src="../images/anhei/anhei7.jpeg" width="400" height="130"></a></td>
+    <td><h3><a href="#">奥陨or火蝠？赛季四人组法师巫医谁主沉浮</a></h3>
+      <p>火蝠巫医一直是近几个赛季的四人组队大腿，尤其是本赛季套装大幅度增强后更是稳坐第一输出的宝座。不过最近形势却有了一些改变，火鸟奥陨流横空出世，瞬间打破了现有的格局，一时和巫医在组队方面分庭抗礼。</p></td>
+  </tr>
+  <tr>
+    <td height="159"><img src="../images/anhei/anhei8.jpeg" width="400" height="130"></td>
+    <td><h3><a href="#">单人速刷之王：猎魔人暗影三刀流视频指南</a></h3>
+      <p>我们凯恩之角特别联合广东电视台体育频道的《超级游戏》栏目为大家带来了猎魔人三刀流的视频攻略，本次视频由凯恩之角论坛玩家 秋仲琉璃子不语 解说，赶紧来视频中学习一下吧。</p></td>
+  </tr>
+</table>
+</div>
+<div id="three">
+  <h2>热点投票</h2>
+  <table width="409" height="288" border="0">
+    <tr>
+      <td height="114">&nbsp;&nbsp;&nbsp; 在当前的赛季中，法师单人方面则是火鸟引导陨石占据了主导位置，再加上黑白电疗，法师至少有三种强度不错的玩法供玩家选择。那么你觉得赛季末哪种玩法会最终登顶呢？</td>
+    </tr>
+    <tr>
+      <td height="118"><p>
+      十二赛季法师哪种玩法会最终登顶？</p>&nbsp;
+        <form name="form1" method="post" action="">
+          <p>
+              <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0">
+              冰封球玩法
+            <br>
+              <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1">
+              引导陨石玩法
+            <br>
+              <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_2">
+              黑白电疗玩法
+            <br>
+              <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_3">
+              其他玩法            </p>
+          <p><br>
+          </p>
+          <input type="submit" name="submit" style="width:90px;text-align:center" value="投票"/>     
+        <input type="submit" name="submit" style="width:90px;text-align:center" value="查看结果"/>     
+</form></td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+<div id="four"><h2>玩家社区</h2>
+<table width="609" border="0">
+  <tr>
+    <td width="452" height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173556392">十二赛季第七周普通模式天梯战报</a></td>
+    <td width="147"><div align="right">易水寒-雨过天晴</div></td>
+  </tr>
+  <tr>
+    <td height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173555835">我和50岁澳洲大妈的冲榜故事</a></td>
+    <td><div align="right">GDean</div></td>
+  </tr>
+  <tr>
+    <td height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173554638">你希望下赛季蛮子能改善哪些方面？</a></td>
+    <td><div align="right">雨夜梧桐</div></td>
+  </tr>
+  <tr>
+    <td height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173555692">死灵法师号令骸骨刷新黄道机制解析</a></td>
+    <td><div align="right">我是一头牦</div></td>
+  </tr>
+  <tr>
+    <td height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173555794">春天来了！奥陨法师带队136层实况</a></td>
+    <td><div align="right">无尽火域沙加</div></td>
+  </tr>
+  <tr>
+    <td height="43"><a href="http://bbs.d.163.com/forum.php?mod=viewthread&tid=173555786">理念的转变：奥陨打法的注意事项</a></td>
+    <td><div align="right">牛毛</div></td>
+  </tr>
+</table>
+
+</div>
+<div id="divd">
+<p>&nbsp;&nbsp;&copy;&nbsp; Tanjieyu&nbsp;&nbsp;&nbsp;保留部分权利。所有商标均为各自持有者所有。</p>
+</p></div>
+<div id="apDiv8"><img src="../images/zhiding.png" width="50" height="50" usemap="#Map">
+  <map name="Map">
+    <area shape="rect" coords="1,1,49,49" href="#top">
+  </map>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+		$('#x').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv1').is(':hidden')) {
+				$('#apDiv1').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv1').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+		$('#y').click(function(evt) {
+			evt.preventDefault();
+			if ($('#apDiv10').is(':hidden')) {
+				$('#apDiv10').slideDown(300);
+				$(this).addClass('close');
+			} else {
+				$('#apDiv10').slideUp(600);
+				$(this).removeClass('close');
+			}
+		}); 
+});
+$(function(){
+  $(".t").css("text-align","center");
+});
+$(".t").mouseover(function(){
+  $(this).css("background-color","#9ea6b9");
+}).mouseout(function(){
+  $(this).css("background-color","transparent");
+});
+</script>
+</body>
+</html>
